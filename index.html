@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>Music Mixer Practice</title>
 </head>
+
+
 <body>
-    
+
+        <header class="grid-con center-grid-con">
+            <h1 class="hidden">Music Mixer Header</h1>
+            <div class="col-start-1 col-end-2 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-3" id="logo">
+                <img src="images/music-mixer-logo.svg" alt="The Painted Orchestra Logo">
+            </div>
+
+            <nav class="nav-box col-start-2 col-end-5 m-col-start-4 m-col-end-13 l-col-end-4 l-col-end-13" id="nav-text">
+                <ul class="col-span-full">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">How To Play</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="grid-con center-grid-con">
+                <h2 class="hidden">Canvas Section</h2>
+                <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-7" id="tracks">
+                    <div class="grid-con">
+                        <button class="play-btn" id="play-toggle">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <polygon points="5,3 19,12 5,21"></polygon>
+                    </svg>
+                    </button> 
+                    </div>
+
+                    <div class="wrapper grid-con">
+                        <button class="vol-btn" id="volume-toggle">
+                    <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M3 9v6h4l5 5V4L7 9H3z"></path>
+                        </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+        <div class="mixer-row">
+            <section id="drop-canvas" class="grid-con center-grid-con">
+                <h2 class="hidden">Drop Zones</h2>
+                <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-3 l-col-end-11">
+                    <img src="images/canvas_and_palette.svg" alt="Canvas with empty score to drag and drop icons, and a palette for the icons">
+                </div>
+                <div class="drop-square" data-accepts="piano"></div>
+                <div class="drop-square" data-accepts="flute"></div>
+                <div class="drop-square" data-accepts="guitar"></div>
+                <div class="drop-square" data-accepts="harp"></div>
+                <div class="drop-square" data-accepts="violin"></div>
+                <div class="drop-square" data-accepts="tuba"></div>
+            </section>
+
+
+            <section id="contents" class="grid-con center-grid-con">
+                <h2 class="hidden">Palette Section</h2>
+                <div class="instruments col-start-1 col-end-3 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" draggable="true" data-type="piano">
+                    <img src="images/piano-icon.svg" alt="Piano SVG Icon">
+                </div>
+
+                <div class="instruments col-start-3 col-end-5 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9" draggable="true" data-type="flute">
+                    <img src="images/flute-icon.svg" alt="Flute SVG Icon">
+                </div>
+
+                <div class="instruments col-start-1 col-end-3 m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13" draggable="true" data-type="guitar">
+                    <img src="images/guitar-icon.svg" alt="Guitar SVG Icon">
+                </div>
+
+                <div class="instruments col-end-5 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" draggable="true" data-type="harp">
+                    <img src="images/harp-icon.svg" alt="Harp SVG Icon">
+                </div>
+
+                <div class="instruments col-start-1 col-end-3 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9" draggable="true" data-type="tuba">
+                    <img src="images/tuba-icon.svg" alt="Tuba SVG Icon">
+                </div>
+
+                <div class="instruments col-start-3 col-end-5 m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13" draggable="true" data-type="violin">
+                    <img src="images/violin-icon.svg" alt="Violin SVG Icon">
+                </div>
+            </section> 
+        </div>
+
+        <div class="grid-con center-grid-con">
+            <button id="reset-btn" class="col-span-full">Reset</button>
+        </div>
+
+        </main>
+
+
+        <footer id="footer" class="grid-con center-grid-con">
+            <div class="col-span-full m-col-span-full l-col-span-full">@ Music Mixer</div>
+        </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
