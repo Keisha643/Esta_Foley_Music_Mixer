@@ -1,4 +1,4 @@
-# Art and Orchestral Theme Music Mixer
+# The Painted Orchestra Music Mixer
 We are building a multimedia application using HTML, CSS, and JavaScript. We are to implement drag and drop functionality to load audio clips and create a dynamic audio experience, trigger animation, and play a compiled audio tracks.
 ## Installation
 No installation required. Simply download the zip file and extract
