@@ -1,0 +1,250 @@
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 1rem 2rem;
+    border-bottom: 4px solid #333;
+}
+
+#logo img {
+    height: 600%;
+}
+
+#nav-text ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 8rem;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 2px rgb(69, 68, 68);
+    font-size: 20px;
+    text-align: center;
+}
+
+#nav-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-box {
+    color: white;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#nav-text a:hover {
+    color: #fbfb5d;
+    font-size: 25px;
+    border-bottom: solid 2px whitesmoke;
+}
+
+#tracks {
+    padding: 20px;
+    padding-top: 30px;
+}
+  
+.play-btn, .vol-btn {
+    background: #222;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.play-btn:hover, .vol-btn:hover {
+    background: #444;
+    transform: scale(1.1);
+}
+
+.icon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+#how-to {
+    font-size: 20px;
+    margin: 25px;
+    padding-bottom: 25px;
+    border-bottom: solid 3px #333;
+}
+
+#how-to p {
+    text-align: center;
+}
+
+/* Contents */
+.mixer-row { 
+    display: flex; 
+    flex-direction: column;
+    padding: 30px; 
+}
+
+#drop-canvas, #contents { 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+/* @media (min-width: 768px) {
+    .mixer-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    } 
+
+    #contents {
+        grid-column: 1 / 2; 
+        grid-row: 2 / 3;  
+    }
+
+    #drop-canvas {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;  
+    } 
+} */
+
+/* Palette Positioning */
+#contents {
+    position: relative;
+}
+
+.instruments {
+    position: absolute;
+    width: 50px;
+    cursor: grab;
+}
+
+.instruments[data-type="piano"] {
+    top: -100px;
+    left: 30px;
+}
+
+.instruments[data-type="flute"] {
+    top: 60px;
+    left: 160px;
+}
+
+.instruments[data-type="guitar"] {
+    top: 60px;
+    left: 280px;
+}
+
+.instruments[data-type="harp"] {
+    top: 160px;
+    left: 40px;
+}
+
+.instruments[data-type="tuba"] {
+    top: 160px;
+    left: 160px;
+}
+
+.instruments[data-type="violin"] {
+    top: 160px;
+    left: 10px;
+}
+
+#reset-btn {
+    background: rgb(31, 31, 31);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#reset-btn:hover {
+    background: #a8a8a8;
+    color: #222;
+}
+
+
+/* Drop Squares */
+#drop-canvas {
+    position: relative;
+}
+
+.drop-square {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+.drop-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.drop-square[data-accepts="piano"]  { 
+    top: 120px; 
+    left: 80px; 
+}
+
+.drop-square[data-accepts="flute"]  { 
+    top: 120px; 
+    left: 200px; 
+}
+
+.drop-square[data-accepts="guitar"] { 
+    top: 120px; 
+    left: 320px; 
+}
+
+.drop-square[data-accepts="harp"]   { 
+    top: 120px; 
+    left: 440px; 
+}
+
+.drop-square[data-accepts="violin"] { 
+    top: 200px; 
+    left: 80px; 
+}
+
+.drop-square[data-accepts="tuba"]   { 
+    top: 200px; 
+    left: 200px; 
+}
+
+.drop-animate {
+    animation: pop 0.3s ease-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+}
